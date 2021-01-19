@@ -2,5 +2,13 @@ server:
   port: 5000
 
 spring:
+  jpa:
+    show_sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+  h2:
+    console:
+      enabled: true
   profiles:
-    include: oauth
+    include: oauth, real-db
