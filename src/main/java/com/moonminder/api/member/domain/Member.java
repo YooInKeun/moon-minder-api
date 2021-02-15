@@ -1,6 +1,6 @@
-package com.moonminder.api.domain.user;
+package com.moonminder.api.member.domain;
 
-import com.moonminder.api.domain.BaseTimeEntity;
+import com.moonminder.api.base.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,7 +10,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor
 @Entity
-public class User extends BaseTimeEntity {
+public class Member extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,7 +26,7 @@ public class User extends BaseTimeEntity {
     private String picture;
 
     @Builder
-    public User(String name, String email, String picture) {
+    public Member(String name, String email, String picture) {
         this.name = name;
         this.email = email;
         this.picture = picture;
