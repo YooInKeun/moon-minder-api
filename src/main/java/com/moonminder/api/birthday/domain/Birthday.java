@@ -1,5 +1,6 @@
 package com.moonminder.api.birthday.domain;
 
+import com.moonminder.api.base.domain.BaseTimeEntity;
 import com.moonminder.api.member.domain.Member;
 import lombok.Builder;
 import lombok.Getter;
@@ -11,7 +12,7 @@ import java.time.LocalDate;
 @Getter
 @NoArgsConstructor
 @Entity(name = "BIRTHDAY")
-public class Birthday {
+public class Birthday extends BaseTimeEntity {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
