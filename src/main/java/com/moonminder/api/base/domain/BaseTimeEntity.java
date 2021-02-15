@@ -1,4 +1,4 @@
-package com.moonminder.api.domain;
+package com.moonminder.api.base.domain;
 
 import lombok.Getter;
 import org.springframework.data.annotation.CreatedDate;
