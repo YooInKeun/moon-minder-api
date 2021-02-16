@@ -4,6 +4,7 @@ import com.moonminder.api.base.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -25,6 +26,7 @@ public class Member extends BaseTimeEntity implements UserDetails {
     @Column(name = "EMAIL", unique = true, nullable = false)
     private String email;
 
+    @Setter
     @Column(name = "PASSWORD", nullable = false)
     private String password;
 
