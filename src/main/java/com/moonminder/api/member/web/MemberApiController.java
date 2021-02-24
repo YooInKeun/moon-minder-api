@@ -18,13 +18,13 @@ public class MemberApiController {
 
     private final MemberService memberService;
 
-    @PostMapping("/signup")
+    @PostMapping("/members")
     public String signup(SignupRequest signupRequest) {
         memberService.save(signupRequest.toMember());
         return "redirect:/login";
     }
 
-    @GetMapping("/logout")
+    @PostMapping("/logout")
     public String logout(HttpServletRequest request, HttpServletResponse response) {
         new SecurityContextLogoutHandler().logout(request, response, SecurityContextHolder.getContext().getAuthentication());
         return "redirect:/login";
